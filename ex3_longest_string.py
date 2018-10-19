@@ -6,6 +6,7 @@ def obter_mais_longa_substring(s):
         while s[c2] >= s[c]:
             if c2 < len(s)-1:
                 c2 += 1
+        c += 1
         if len(s[c:c2]) >= len(aux):
             aux = s[c:c2]
     return aux
