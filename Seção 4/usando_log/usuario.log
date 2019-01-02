@@ -1,0 +1,15 @@
+10/11/2018 11:06:27 PM - __main__ - INFO - Alterada a senha!!
+10/11/2018 11:06:27 PM - __main__ - WARNING - Tentativa de acesso de inválida
+10/11/2018 11:06:27 PM - __main__ - ERROR - Usuario id não existe: usuario_id=0
+10/11/2018 11:06:27 PM - __main__ - ERROR - Error:
+Traceback (most recent call last):
+  File "D:/Documentos/Python/POO_Python/POO_Python_Udemy/Seção 4/usando_log/usuario.py", line 40, in abrir_arquivo_usuario
+    open('/path/to/does/not/exist', 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '/path/to/does/not/exist'
+10/11/2018 11:06:27 PM - __main__ - DEBUG - 0 iterator, item=1
+10/11/2018 11:06:27 PM - __main__ - DEBUG - 1 iterator, item=2
+10/11/2018 11:06:27 PM - __main__ - DEBUG - 2 iterator, item=3
+10/11/2018 11:06:27 PM - __main__ - DEBUG - 3 iterator, item=4
+10/11/2018 11:06:27 PM - D:\Documentos\Python\POO_Python\POO_Python_Udemy\Seção 4\usando_log\aula.py - INFO - Mensagem informativa
+10/11/2018 11:06:27 PM - D:\Documentos\Python\POO_Python\POO_Python_Udemy\Seção 4\usando_log\aula.py - DEBUG - Mensagem de debug
+10/11/2018 11:06:27 PM - D:\Documentos\Python\POO_Python\POO_Python_Udemy\Seção 4\usando_log\aula.py - ERROR - Um erro aconteceu

@@ -1,0 +1,3 @@
+pip install nose
+
+No cmd, nosetests
