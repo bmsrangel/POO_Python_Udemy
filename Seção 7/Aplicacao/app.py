@@ -2,6 +2,7 @@
 # Pode-se utilizar o venv para gerar a lista de requisitos de bibliotecas.
 # Basta ir na pasta do projeto e usar o comando pip freeze > requirements.txt
 from bottle import *
+import os
 
 
 # static routes
@@ -25,7 +26,7 @@ def fonts(filename):
     return static_file(filename, root='static/fonts')
 
 
-@route('/login')  # @get('/login')
+@route('/')  # @get('/')
 def login():
     return template('login')
 
@@ -35,7 +36,12 @@ def check_login(username, password):
     return True if username in d.keys() and d[username] == password else False
 
 
-@route('/login', method='POST')  # @post('/login')
+# @route('/')
+# def index():
+#     return template('index')
+
+
+@route('/', method='POST')  # @post('/')
 def acao_login():
     username = request.forms.get('username')
     password = request.forms.get('password')
@@ -50,4 +56,7 @@ def error404(error):
 
 
 if __name__ == '__main__':
-    run(host='localhost', port=8080, reloader=True)
+    if os.environ.get('APP_LOCATION') == 'heroku':
+        run(host=0.0.0.0, port=int(os.environ.get('PORT', 5000)))
+    else:
+        run(host='localhost', port=8080, reloader=True)
